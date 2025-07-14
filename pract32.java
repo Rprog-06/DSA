@@ -23,7 +23,7 @@ public class pract32 {
            if(count==0){
             candidate=i;
            }
-        if(i==candidate){
+        if(i==candidate){ 
             count+=1;
         }
        else{
