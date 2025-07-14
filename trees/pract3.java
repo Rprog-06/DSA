@@ -1,3 +1,4 @@
+import java.util.*;
  class node{
         int data;
         node left, right;
@@ -51,7 +52,7 @@
        newnode.right = build(arr, mid + 1, right);
         return newnode;}
     public void KthSmallest(node root, int k, int[] count) {
-        if (root == null || count[0] >= k) return;
+          if (root == null || count[0] >= k) return;
         // Traverse the left subtree
         KthSmallest(root.left, k, count);
         // Increment the count of visited nodes
@@ -63,8 +64,10 @@
         }
         // Traverse the right subtree
         KthSmallest(root.right, k, count);
+
     }
        public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         pract3 tree = new pract3();
         tree.root = new node(78);
         tree.root.left = new node(45);
@@ -81,7 +84,10 @@
        // The following code demonstrates how to use the new, refactored class.
 
        // 1. Build BST from a sorted array
-       int[] arr = {12, 20, 32, 45, 78, 90, 100};
+       int[] arr = new int[10];
+       for (int i = 0; i < arr.length; i++) {
+           arr[i] =sc.nextInt(); // Example values, replace with actual input
+       }
      int k = 1;
        node bstRoot = buildbst(arr);
        pract3 bstTree = new pract3();
