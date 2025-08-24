@@ -3,10 +3,12 @@ import java.util.Scanner;
 
 //Creating a linked list in  nested class and inserting at End
 public class pract24 {
+
     static Node head;
 
     // Nested static Node class
     private static class Node {
+
         private int data;
         private Node next;
 
@@ -48,62 +50,59 @@ public class pract24 {
         }
         System.out.println("null");
     }
-    public void count(){
-        int count=0;
-        Node current=head;
-        while(current !=null){
-         count++;
-         current=current.next;
+
+    public void count() {
+        int count = 0;
+        Node current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
         }
-        System.out.println("NUmber of nodes :"+count);
+        System.out.println("NUmber of nodes :" + count);
 
     }
-    public void search(int target){
-        Node current=head;
-        while(current !=null){
-              if(current.data==target){
+
+    public void search(int target) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == target) {
 
                 System.out.println("Element found");
                 return;
-              }
-             
-               
-             
-            
+            }
 
-              current=current.next;
+            current = current.next;
         }
-         System.out.println("Not found");
+        System.out.println("Not found");
     }
-    public void insertAtmiddle(int data,int n){
-        Node newnode=new Node(data);
-        Node current=head;
 
+    public void insertAtmiddle(int data, int n) {
+        Node newnode = new Node(data);
+        Node current = head;
 
-        while(current.data!=n){
-                current=current.next;
+        while (current.data != n) {
+            current = current.next;
         }
-        newnode.next=current.next;
-        current.next=newnode;
+        newnode.next = current.next;
+        current.next = newnode;
 
     }
-    
 
     // Main to test functionality
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         pract24 list = new pract24();
 
         list.insertAtEnd(10);
         list.insertAtEnd(20);
         list.insertAtBegin(5);
-      list.insertAtmiddle(80, 5);
+        list.insertAtmiddle(80, 5);
         list.insertAtEnd(30);
 
         list.display();
-        list.count(); 
+        list.count();
         System.out.print("Enter target to seracg");
-        int target=sc.nextInt();
+        int target = sc.nextInt();
         list.search(target);
         // Output: 5 -> 10 -> 20 -> 30 -> null
     }
