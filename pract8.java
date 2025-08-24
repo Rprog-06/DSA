@@ -33,7 +33,7 @@ int cost=0;
  System.out.println(cost);
  System.out.println(Math.abs(sum-cost));
 
- for
+ 
 
     }
 }
