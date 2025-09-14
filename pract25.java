@@ -52,7 +52,8 @@ public class pract25{
        public void deletefront(){
         node current=head;
         head=head.next;
-        head=current.next;
+    //      head=current.next;
+    //    }
        }
        public void deleteend(){
            node current = head;
@@ -88,9 +89,16 @@ public class pract25{
            p.insertAtEnd(25);
             p.insertAtEnd(35);
           p.insertAtBegin(12);
+          p.reverse();;
+          
+          p.display();
+          p.deletefront();
+          p.display();
           p.deletemiddle(25);
-        //  p.reverse();
-         // p.deleteend();
+          p.display();
+          
+         p.reverse();
+        
            p.display();
 
 

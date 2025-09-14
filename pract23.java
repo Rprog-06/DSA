@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-import javax.crypto.NullCipher;
 
 class xyz{
     int data;
@@ -20,6 +19,7 @@ public class pract23{
         System.out.println("Enter number");
         int n=sc.nextInt();
         xyz q=new xyz(n);
+       
         System.out.println("The number is");
        System.out.println(q.data);
 
