@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class pract9{
     public static void main(String[] args) {
         //I want to print spiral matrix
@@ -21,7 +22,7 @@ public class pract9{
             
         }
 
-    }
+    
         int top=0, bottom=x-1, left=0, right=y-1;
         while(top<=bottom && left<=right){
             //print top row

@@ -27,7 +27,7 @@ public class pract32 {
             count+=1;
         }
        else{
-        count=-1;
+        count-=1;
        }
         }
         return candidate;

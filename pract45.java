@@ -42,7 +42,7 @@ public class pract45{
         int x=4;
         for(int i=1;i<=4;i++){
             arr[i]=sc.nextInt();
-            String binary=Integer.toBinaryString(arr[i]);
+            String binary[]=Integer.toBinaryString(arr[i]);
             p.insert(binary);
         }
     }
