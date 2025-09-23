@@ -14,6 +14,13 @@ public class charcount{
         }
         //First non-repeating character
         System.out.println(mp);
+       
+        for(int i=0;i<s.length();i++){
+            if(mp.get(s.charAt(i))>1){
+                System.out.println(s.charAt(i));
+                break;
+            }
+        }
 
        
     
