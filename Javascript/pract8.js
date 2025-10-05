@@ -33,3 +33,44 @@ const c=orders.reduce((acc,price)=>{
     return acc + d;
 },0)
 console.log(c)
+const result = orders
+  .filter(order => {
+    const total = order.items.reduce(
+      (sum, item) => sum + item.price * item.quantity, 
+      0
+    );
+    console.log(order.customer.name, "spent:", total); // 🔎 debug
+    return total > 40000;
+  })
+  .map(order => order.customer.name);
+
+console.log("Final Result:", result);
+
+const items=orders.flatMap(order=>order.items)
+console.log(items);
+
+const all=orders.flatMap(order=>order.items.map(item=>item.product))
+console.log(all);
+
+const maxOrder = orders.reduce((max, order) => {
+  const maxTotal = max.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const orderTotal = order.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  
+  return orderTotal > maxTotal ? order : max;
+});
+
+console.log(maxOrder.orderId, maxOrder.customer.name);
+const item=orders.filter(emp=>emp.items.some(item=>item.quantity>=2)).map(name=>name.customer.name);
+console.log(item);
+
+const av=orders.map(emp=>{
+   const b=emp.items.reduce((acc,a)=>acc+a.price*a.quantity,0);
+   const c=emp.items.reduce((acc,c)=>acc+c.quantity,0);
+   const avg=b/c;
+   return{
+    name:emp.customer.name,
+    avg:avg
+   };
+   
+})
+console.log(av);
