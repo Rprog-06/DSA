@@ -45,13 +45,13 @@ const e=data.filter(person=>person.department==="Engineering");
 const totalSalary=data.reduce((acc,person)=>acc+person.salary,0);
 //console.log(totalSalary);
 const allproject=data.flatMap(person=>person.projects.map(project=>project.title));
-//console.log(allproject);
+console.log(allproject);
 const b=data.filter(person=>person.projects.length>=1).map(person=>person.name);
 //console.log(b);
 const m=data.reduce((acc,salarya)=>salarya.salary>acc.salary ? salarya:acc);
 //console.log(m.name);
 const budget=data.reduce((acc,person)=>acc+person.projects.reduce((proj,project)=>proj+project.budget,0),0)
-//console.log(budget);
+console.log(budget);
 const deptwise=data.reduce((acc,emp)=>{
     acc[emp.department]=(acc[emp.department]||0)+emp.salary
     return acc;

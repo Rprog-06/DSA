@@ -31,7 +31,7 @@ const userName=users.map(user =>{
     }
 });
 
-//console.log(userName)
+console.log(userName)
 const eachtotal=users.map(user =>{
     const price=user.orders.reduce((sum,order)=>sum+order.price,0)
         return{
@@ -40,13 +40,13 @@ const eachtotal=users.map(user =>{
         }
     
 });
-//console.log(eachtotal)
+console.log(eachtotal)
 
 const totalSpend=users.reduce((total,user)=>{
   const usertotal=user.orders.reduce((sum,order)=>sum+order.price,0);
   return total+usertotal;
 },0);  
-//console.log(totalSpend)
+console.log(totalSpend)
 const max=users.map(user=>{
   const a=user.orders.reduce((max,order)=>order.price>max?order.price:max,0);
   return{
