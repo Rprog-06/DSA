@@ -25,11 +25,11 @@ public class pract69 {
         return false;
     }
 
-    // Recursive DFS
+    // Recursive DFS 
     public static boolean dfs(char[][] board, String word, int i, int j, int index) {
         if (index == word.length()) return true;
 
-        // Boundary + mismatch check
+        // Boundary +mismatch check
         if (i < 0 || j < 0 || i >= board.length || j >= board[0].length ||
             board[i][j] != word.charAt(index)) {
             return false;

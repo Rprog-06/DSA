@@ -16,13 +16,13 @@ public class home1 {
 
         // Append all '#' at the beginning
         for (int i = 0; i < hashCount; i++) {
-            result.append('#');
+            nonHashPart.append('#');
         }
 
         // Append the rest of the characters
-        result.append(nonHashPart);
+        // result.append(nonHashPart);
 
-        return result.toString();
+        return nonHashPart.toString();
     }
 
     public static void main(String[] args) {

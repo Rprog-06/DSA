@@ -25,10 +25,10 @@ public class pract15{
             return mid;
         }
         else if(arr[mid]>target){
-            high=mid+1;
+            high=mid-1;
         }
         else{
-            low=mid-1;
+            low=mid+1;
         }
     }
         

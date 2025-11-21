@@ -38,7 +38,7 @@ public class pract45{
     public static void main(String[] args) {
         pract45 p = new pract45();
         Scanner sc=new Scanner(System.in);
-        String arr[]=new String[4];
+        int arr[]=new int[4];
         int x=4;
         for(int i=1;i<=4;i++){
             arr[i]=sc.nextInt();
