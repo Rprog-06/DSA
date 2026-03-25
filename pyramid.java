@@ -1,7 +1,7 @@
 public class pyramid {
    public static void main(String[] args) {
        
-    int n=3;
+    int n=9;
     for(int i=n;i>=1;i--){
         for(int j=i;j<n;j++){
             System.out.print(" ");
